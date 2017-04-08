@@ -18,6 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <stdio.h>
+# include <stdbool.h>
 
 void		ft_fill(int flag_no, char c);
 void		ft_dot_flag(char *format, char *tmp, char flag);

@@ -84,23 +84,36 @@ void	ft_x(va_list ap, char *format, char specif)
 
 void	ft_d(va_list ap, char *format, char flag)
 {
-	int	d;
-	int	d_1;
-	int	flag_no;
-	int	width;
+	int		d;
+	int		d_1;
+	int		flag_no;
+	int		width;
+	bool	boolValue;
 
 	d = va_arg(ap, int);
 	d_1 = va_arg(ap, int);
+	boolValue = false;
 	if (flag == '+')
+	{
+		boolValue = true;
 		ft_putwidth(d, d_1);
+	}
 	if (ft_chrpos(format, flag) && flag != '+')
 	{
 		flag_no = ft_flag_no(format, flag);
 		width = ft_nbrlen(d) + 1;
+		if (flag == '0')
+			ft_putchar('-');
 		ft_fill(flag_no - width, flag);
 		if (d > -1 && flag != '0')
 			ft_putchar('+');
 	}
 	if (flag != '*')
-		ft_putnbr(d);
+	{
+		if (d < 0 && flag == '0')
+			ft_putnbr(d * (-1));
+		else
+			if (boolValue == false)
+				ft_putnbr(d);
+	}
 }

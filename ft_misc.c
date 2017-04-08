@@ -81,5 +81,5 @@ void	ft_putwidth(int x, int x_1)
 
 	width = ft_nbrlen(x_1) + 1;
 	ft_fill((x - width), ' ');
-	ft_putnbr(x_1);
+	ft_putnbr(x);
 }
