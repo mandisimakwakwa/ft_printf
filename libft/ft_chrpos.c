@@ -11,5 +11,5 @@ int		ft_chrpos(const char *s, int c)
 			return (i);
 		i++;
 	}
-	return (0);
+	return (-1);
 }

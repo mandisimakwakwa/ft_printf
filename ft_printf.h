@@ -24,6 +24,7 @@ void		ft_dot_flag(char *format, char *tmp, char flag);
 void		ft_putwidth(int x, int x_1);
 void		ft_c(va_list ap, char *format, char flag);
 void		ft_s(va_list ap, char *format, char flag);
+void		ft_S(va_list ap, char *format, char flag);
 void		ft_p(va_list ap);
 void		ft_x(va_list ap, char *format, char specif);
 void		ft_d(va_list ap, char *format, char flag);

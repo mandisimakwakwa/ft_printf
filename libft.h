@@ -6,7 +6,7 @@
 /*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/18 10:58:09 by mmakwakw          #+#    #+#             */
-/*   Updated: 2017/01/03 15:43:06 by mmakwakw         ###   ########.fr       */
+/*   Updated: 2017/01/03 14:48:56 by mmakwakw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 
 # define LIBFT_H
 # include <string.h>
+# include <wchar.h>
 
 void		ft_putchar(char c);
 void		ft_putnbr(int n);
@@ -59,9 +60,11 @@ char		**ft_strsplit(char const *s, char c);
 char		*ft_itoa_base(int n, int base);
 char		*ft_itoa(int n);
 char		ft_ishex(int n);
+char		*ft_wchrstr(wchar_t *src, char *dst, size_t dstLen);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *s);
 size_t		ft_nbrlen(int n);
+size_t		ft_wchrlen(wchar_t *s);
 int			ft_strcmp(const char *s1, const char *s2);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);

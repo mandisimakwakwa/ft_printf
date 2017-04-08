@@ -61,9 +61,11 @@ int		ft_chkmod(char *format)
 	pos = ft_chrpos(format, '%');
 	if (format[pos + 1] == '%' && format[pos] == '%')
 		return (2);
-	else if (!ft_chrpos(format, '%') && format[0] != '%')
+	else if (ft_chrpos(format, '%') == -1)
 		return (-1);
-	else if (ft_chrpos(format, '%') || format[0] == '%')
+	else if (ft_chrpos(format, '%') == 0 || format[0] == '%')
+		return (1);
+	else if (ft_chrpos(format, '%') > 0)
 		return (1);
 	else
 		return (0);

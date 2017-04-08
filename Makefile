@@ -87,7 +87,9 @@ OBJ = ft_printf.o \
 	  $(PATH_LIB)ft_nbrlen.o \
 	  $(PATH_LIB)ft_puthex_pf.o \
 	  $(PATH_LIB)ft_putoctal.o \
-	  $(PATH_LIB)ft_putunsigned.o
+	  $(PATH_LIB)ft_putunsigned.o \
+	  $(PATH_LIB)ft_wchrlen.o \
+	  $(PATH_LIB)ft_wchrstr.o
 
 SRC = $(patsubst %.o, %.c, $(OBJ));
 
