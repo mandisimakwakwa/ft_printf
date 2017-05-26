@@ -109,3 +109,14 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+test:
+	gcc -c main.c -I ./libft/
+	gcc -o test main.o $(NAME)
+	rm -f $(OBJ)
+
+tclean:
+	rm -f test
+	rm -f main.o
+
+retest: tclean test
