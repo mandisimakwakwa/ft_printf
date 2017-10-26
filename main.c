@@ -4,15 +4,14 @@
 int		main(void)
 {
 	//No Flag
-	printf("Printf no flag string test\n");
+	printf("\n\nPrintf no flag string test\n");
 	ft_printf("ft_printf no flag string test\n\n");
 
 	//%%
 	printf("printf: ");
 	printf("%%\n");
 	ft_printf("ft_printf: ");
-	ft_printf("%%\n");
-	ft_printf("\n");
+	ft_printf("%%\n\n");
 
 	//s
 	printf("printf: ");
@@ -28,8 +27,10 @@ int		main(void)
 
 	//p
 	char *p;
+	char x;
 
-	p = 5;
+	x = 'a';
+	p = &x;
 	printf("printf: ");
 	printf("%p\n", p);
 	ft_printf("ft_printf: ");
