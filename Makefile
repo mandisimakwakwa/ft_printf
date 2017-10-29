@@ -120,3 +120,5 @@ tclean:
 	rm -f main.o
 
 retest: tclean test
+
+.PHONY: all clean fclean re test tclean retest

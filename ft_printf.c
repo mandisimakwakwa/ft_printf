@@ -31,6 +31,7 @@ static void	ft_process(char *format, va_list ap)
 		{
 			i++;
 			flag = ft_getflag(format[i]);
+//			ft_putchar(flag);
 			i = ft_print(format, flag, ap, i);
 		}
 		else if (format[i] != '\0')

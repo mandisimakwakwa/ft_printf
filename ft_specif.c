@@ -105,7 +105,7 @@ void	ft_d(va_list ap, char *format, char flag)
 		if (flag == '0')
 			ft_putchar('-');
 		ft_fill(flag_no - width, flag);
-		if (d > -1 && flag != '0')
+		if (d > -1 && flag != '\0')
 			ft_putchar('+');
 	}
 	if (flag != '*')
