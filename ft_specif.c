@@ -85,18 +85,20 @@ void	ft_x(va_list ap, char *format, char specif)
 void	ft_d(va_list ap, char *format, char flag)
 {
 	int		d;
-	int		d_1;
+//	int		d_1;
 	int		flag_no;
 	int		width;
 	bool	boolValue;
 
 	d = va_arg(ap, int);
-	d_1 = va_arg(ap, int);
+//	d_1 = va_arg(ap, int);
 	boolValue = false;
 	if (flag == '+')
 	{
 		boolValue = true;
-		ft_putwidth(d, d_1);
+		ft_putchar('+');
+		ft_putnbr(d);
+//		ft_putwidth(d, d_1);
 	}
 	if (ft_chrpos(format, flag) && flag != '+')
 	{

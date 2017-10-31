@@ -18,5 +18,20 @@ int		main(void)
 	printf("%d\n", 650);
 	ft_printf("ft_printf: ");
 	ft_printf("%d\n", 650);
+
+	printf("printf: ");
+    printf("%+d\n", 650);
+    ft_printf("ft_printf: ");
+    ft_printf("%+d\n", 650);
+
+    printf("printf: ");
+    printf("%+1d\n", 650);
+    ft_printf("ft_printf: ");
+    ft_printf("%+1d\n", 650);
+
+    printf("printf: ");
+    printf("%+10d\n", 650);
+    ft_printf("ft_printf: ");
+    ft_printf("%+10d\n", 650);
     return (0);
 }
