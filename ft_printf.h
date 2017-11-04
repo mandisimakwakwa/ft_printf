@@ -38,5 +38,6 @@ int			ft_printf(const char *format, ...);
 int			ft_skip(char *format, int i);
 int			ft_flag_no(char *format, char flag);
 int			ft_chkmod(char *format);
+int         ft_getWidthValue(char *format, char flag);
 char		ft_getflag(char flag);
 #endif

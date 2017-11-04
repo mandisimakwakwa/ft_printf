@@ -12,10 +12,13 @@
 
 # include "ft_printf.h"
 
-int     ft_getWidth(char *format, char flag)
+int     ft_getWidthValue(char *format, char flag)
 {
 
     //Check whats before the specifier
+    ft_putstr(format);
+    ft_putchar(flag);
     //Get the value if there is one
     //return result
+    return 0;
 }

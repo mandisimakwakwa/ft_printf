@@ -20,6 +20,7 @@ CFLAGS = -Wall -Wextra -Werror -I ./include/
 
 OBJ = ft_printf.o \
 	  ft_misc.o \
+	  ft_misc2.o \
 	  ft_flags.o \
 	  ft_specif.o \
 	  ft_specif2.o \

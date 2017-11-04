@@ -99,6 +99,7 @@ void	ft_d(va_list ap, char *format, char flag)
 		ft_putchar('+');
 		ft_putnbr(d);
 //		ft_putwidth(d, d_1);
+        ft_getWidthValue(format, flag);
 	}
 	if (ft_chrpos(format, flag) && flag != '+')
 	{
