@@ -93,17 +93,18 @@ void	ft_d(va_list ap, char *format, char flag)
 	d = va_arg(ap, int);
 //	d_1 = va_arg(ap, int);
 	boolValue = false;
+	flag_no = ft_flag_no(format, flag);
+
 	if (flag == '+')
 	{
 		boolValue = true;
+		if (flag_no > 0)
+		    ft_fill(flag_no - (ft_nbrlen(d) + 2), ' ');
 		ft_putchar('+');
 		ft_putnbr(d);
-//		ft_putwidth(d, d_1);
-        ft_getWidthValue(format, flag);
 	}
 	if (ft_chrpos(format, flag) && flag != '+')
 	{
-		flag_no = ft_flag_no(format, flag);
 		width = ft_nbrlen(d) + 1;
 		if (flag == '0')
 			ft_putchar('-');
