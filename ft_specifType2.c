@@ -41,8 +41,5 @@ void	ft_u(va_list ap, char *format, char flag)
         ft_fill((param - u_length), '0');
     if (param)
         ft_fill(param - u_length, ' ');
-//    if (flag == '+')
-//        if (u > 0)
-//            ft_putchar('+');
     ft_putunsigned(u);
 }
