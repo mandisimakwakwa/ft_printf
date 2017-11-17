@@ -19,10 +19,15 @@ CC = gcc
 CFLAGS = -Wall -Wextra -Werror -I ./include/
 
 OBJ = ft_printf.o \
-	  ft_misc.o \
+      ft_mod.o \
+	  ft_param.o \
 	  ft_flags.o \
-	  ft_specif.o \
-	  ft_specif2.o \
+	  ft_width.o \
+	  ft_precision.o \
+	  ft_length.o \
+	  ft_specifType.o \
+	  ft_specifType2.o \
+	  ft_support.o \
 	  $(PATH_LIB)ft_atoi.o \
 	  $(PATH_LIB)ft_bzero.o \
 	  $(PATH_LIB)ft_isalnum.o \
@@ -120,3 +125,5 @@ tclean:
 	rm -f main.o
 
 retest: tclean test
+
+.PHONY: all clean fclean re test tclean retest
