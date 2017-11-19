@@ -38,10 +38,16 @@ void	ft_s(va_list ap, char *format, char flag)
         s_length = ft_strlen(s);
         if (ft_strcmp(s, "") == 0 && !flag)
             ft_putstr("");
-        if (param > 0 && !flag)
+        if (param > 0 && (flag == ' ' || flag == '+'))
             ft_fill(param - s_length, ' ');
         if (s)
+        {
+            if (param > 0 && !flag)
+                ft_fill(param - s_length, ' ');
             ft_putstr(s);
+            if (flag == '-')
+                ft_fill(param - s_length, ' ');
+        }
     }
 }
 

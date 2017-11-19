@@ -359,5 +359,53 @@ int		main(void)
     ft_printf("Input\t\t: Coconut\n");
     ft_printf("Output\t\t: ");
     ft_printf("% s\n\n", "Coconut");
+
+    //Specifier (space)4s check
+    printf("Test 26\t\t: (space)4s\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: Co\n");
+    printf("Output\t\t: ");
+    printf("% 4s\n\n", "Co");
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: Co\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("% 4s\n\n", "Co");
+
+    //Specifier -4s check
+    printf("Test 27\t\t: -4s\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: Co\n");
+    printf("Output\t\t: ");
+    printf("%-4s\n\n", "Co");
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: Co\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%-4s\n\n", "Co");
+
+    //Specifier +4s check
+    printf("Test 28\t\t: +4s\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: Co\n");
+    printf("Output\t\t: ");
+    printf("%+4s\n\n", "Co");
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: Co\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%+4s\n\n", "Co");
+
+    //Specifier 10s check
+    printf("Test 29\t\t: 10s\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: Coco\n");
+    printf("Output\t\t: ");
+    printf("%10s\n\n", "Coco");
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: Coco\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%10s\n\n", "Coco");
     return (0);
 }
