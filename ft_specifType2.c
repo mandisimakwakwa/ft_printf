@@ -47,7 +47,7 @@ void	ft_o(va_list ap, char *format, char flag)
             ft_fill(param - ft_nbrlen(o), '0');
         ft_putoctal(o);
         if (flag == '-' && param > 0)
-            ft_fill(param - ft_nbrlen(o), '*');
+            ft_fill(param - ft_nbrlen(o), ' ');
     }
 }
 
