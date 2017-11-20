@@ -30,9 +30,9 @@ void	ft_o(va_list ap, char *format, char flag)
     char    *tmp;
 
     o = va_arg(ap, int);
-    if (flag == '0')
+    if ((flag=='0') || (flag=='-'&&format[ft_chrpos(format, flag)+1]=='0'))
     {
-        tmp = ft_strsub(format, ft_chrpos(format, 'O') + 1, ft_strlen(format));
+        tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
         param = ft_getParam(tmp, flag) - 1;
     }
     else
@@ -47,7 +47,7 @@ void	ft_o(va_list ap, char *format, char flag)
             ft_fill(param - ft_nbrlen(o), '0');
         ft_putoctal(o);
         if (flag == '-' && param > 0)
-            ft_fill(param - ft_nbrlen(o), ' ');
+            ft_fill(param - ft_nbrlen(o), '*');
     }
 }
 
