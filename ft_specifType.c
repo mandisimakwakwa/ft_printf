@@ -20,8 +20,34 @@ void    ft_specifTypeIni(char *format, char specif, char flag, va_list ap)
         ft_u(ap, format, flag);
 }
 
-void	ft_c()
-{}
+void	ft_c(va_list ap, char *format, char flag)
+{
+    char    c;
+    char    f_addon;
+    char    *tmp;
+    int     param;
+    int     p_addon;
+
+    c = (char)va_arg(ap, int);
+    f_addon = format[ft_chrpos(format, flag) + 1];
+    tmp = ft_strsub(format, ft_chrpos(format, f_addon), ft_strlen(format) - 2);
+    param = ft_getParam(format, flag) - 1;
+    p_addon = ft_getParam(tmp, flag) - 1;
+    if (flag == '+' && f_addon != '-')
+        ft_fill(param - 1, ' ');
+    if (flag == '0' && f_addon != '+')
+        ft_fill(param - 1, ' ');
+    if (f_addon == '+' && flag == '0')
+        ft_fill(p_addon - 1, ' ');
+    if (c)
+    {
+        if (param > 0 && !flag)
+            ft_fill(param - 1, ' ');
+        ft_putchar(c);
+        if (f_addon == '-' && flag == '+')
+            ft_fill(param - 1, ' ');
+    }
+}
 
 void	ft_s(va_list ap, char *format, char flag)
 {

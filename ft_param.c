@@ -9,7 +9,7 @@ int     ft_getParam(char *format, char flag)
 
     temp = ft_memalloc(ft_strlen(format));
     i = 0;
-    if (flag == 'b')
+    if (flag)
         while (!ft_isdigit(format[i]))
             i++;
     else if(ft_isdigit(format[ft_chrpos(format, '%') + 1]))

@@ -407,5 +407,77 @@ int		main(void)
     ft_printf("Input\t\t: Coco\n");
     ft_printf("Output\t\t: ");
     ft_printf("%10s\n\n", "Coco");
+
+    //Specifier c check
+    printf("Test 30\t\t: c\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: a\n");
+    printf("Output\t\t: ");
+    printf("%c\n\n", 'a');
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: a\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%c\n\n", 'a');
+
+    //Specifier 10c check
+    printf("Test 31\t\t: 10c\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: a\n");
+    printf("Output\t\t: ");
+    printf("%10c\n\n", 'a');
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: a\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%10c\n\n", 'a');
+
+    //Specifier +10c check
+    printf("Test 32\t\t: +10c\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: a\n");
+    printf("Output\t\t: ");
+    printf("%+10c\n\n", 'a');
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: a\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%+10c\n\n", 'a');
+
+    //Specifier 010c check
+    printf("Test 33\t\t: 010c\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: a\n");
+    printf("Output\t\t: ");
+    printf("%010c\n\n", 'a');
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: a\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%010c\n\n", 'a');
+
+    //Specifier +-10c check
+    printf("Test 34\t\t: +-10c\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: a\n");
+    printf("Output\t\t: ");
+    printf("%+-10c\n\n", 'a');
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: a\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%+-10c\n\n", 'a');
+
+    //Specifier 0+10c check
+    printf("Test 35\t\t: 0+10c\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: a\n");
+    printf("Output\t\t: ");
+    printf("%0+10c\n\n", 'a');
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: a\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%0+10c\n\n", 'a');
     return (0);
 }

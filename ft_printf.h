@@ -26,7 +26,7 @@ char        ft_getFlag(char flag);
 int         ft_output(char *format, char flag, va_list ap, int i);
 int         ft_skip(char *format, int i);
 void        ft_specifTypeIni(char *format, char specif, char flag, va_list ap);
-void	    ft_c();
+void	    ft_c(va_list ap, char *format, char flag);
 void    	ft_s(va_list ap, char *format, char flag);
 void    	ft_p();
 void    	ft_x();
