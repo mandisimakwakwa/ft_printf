@@ -32,12 +32,23 @@ void	ft_o(va_list ap, char *format, char flag)
 
     o = va_arg(ap, int);
     f_addon = format[ft_chrpos(format, flag) + 1];
-    if ((flag == '0') || (flag == '-' && f_addon == '0'))
+    if (flag == '0')
     {
         tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
         param = ft_getParam(tmp, flag) - 1;
     }
-    if (flag == '#' && f_addon == '-')
+    if (flag == '-' && f_addon == '0')
+    {
+        if (ft_chrpos(format, '#') > 0)
+        {
+            ft_putchar('0');
+            tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
+        }
+        else
+            tmp = ft_strsub(format, ft_chrpos(format, '+'), ft_strlen(format));
+        param = ft_getParam(tmp, flag) - 1;
+    }
+    else if (flag == '#' && f_addon == '-')
         tmp = ft_strsub(format, ft_chrpos(format, '+') + 1, ft_strlen(format));
     else
         param = ft_getParam(format, flag) - 1;

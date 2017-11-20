@@ -613,7 +613,7 @@ int		main(void)
     ft_printf("%#+10o\n\n", 2048);
 
     //Specifier #-0+10o check
-    printf("Test 46\t\t: #-0+10o\n\n");
+    printf("Test 47\t\t: #-0+10o\n\n");
     printf("Function\t: Printf\n");
     printf("Input\t\t: 2048\n");
     printf("Output\t\t: ");
@@ -623,5 +623,29 @@ int		main(void)
     ft_printf("Input\t\t: 2048\n");
     ft_printf("Output\t\t: ");
     ft_printf("%#-0+10o\n\n", 2048);
+
+    //Specifier -0#+10o check
+    printf("Test 48\t\t: -0#+10o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 2048\n");
+    printf("Output\t\t: ");
+    printf("%-0#+10o\n\n", 2048);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 2048\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%-0#+10o\n\n", 2048);
+
+    //Specifier o check
+    printf("Test 49\t\t: o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 02047\n");
+    printf("Output\t\t: ");
+    printf("%o\n\n", 02047);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 02047\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%o\n\n", 02047);
     return (0);
 }
