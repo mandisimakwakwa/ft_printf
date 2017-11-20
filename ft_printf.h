@@ -32,7 +32,7 @@ void    	ft_p();
 void    	ft_x();
 void    	ft_d(va_list ap, char *format, char flag);
 void    	ft_i();
-void    	ft_o();
+void    	ft_o(va_list ap, char *format, char flag);
 void    	ft_u(va_list ap, char *format, char flag);
 void        ft_mod(char *format);
 int         ft_getParam(char *format, char flag);

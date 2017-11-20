@@ -18,11 +18,7 @@ int     ft_getParam(char *format, char flag)
         i = ft_chrpos(format, flag) + 1;
     j = 0;
     while (ft_isdigit(format[i]))
-    {
-        temp[j] = format[i];
-        i++;
-        j++;
-    }
+        temp[j++] = format[i++];
     temp[j] = '\0';
     ret = ft_atoi(temp);
     free(temp);

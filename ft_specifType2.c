@@ -23,8 +23,22 @@ void	ft_d(va_list ap, char *format, char flag)
 void	ft_i()
 {}
 
-void	ft_o()
-{}
+void	ft_o(va_list ap, char *format, char flag)
+{
+    int     o;
+    int     param;
+
+    o = va_arg(ap, int);
+    param = ft_getParam(format, flag) - 1;
+    if (param > 0 && !flag)
+        ft_fill(param - 1, ' ');
+    if (o)
+    {
+        ft_putoctal(o);
+        if (flag == '-' && param > 0)
+            ft_fill(param - ft_nbrlen(o), '*');
+    }
+}
 
 void	ft_u(va_list ap, char *format, char flag)
 {

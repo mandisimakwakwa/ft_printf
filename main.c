@@ -479,5 +479,65 @@ int		main(void)
     ft_printf("Input\t\t: a\n");
     ft_printf("Output\t\t: ");
     ft_printf("%0+10c\n\n", 'a');
+
+    //Specifier o check
+    printf("Test 36\t\t: o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 2048\n");
+    printf("Output\t\t: ");
+    printf("%o\n\n", 2048);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 2048\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%o\n\n", 2048);
+
+    //Specifier (space)o check
+    printf("Test 37\t\t: (space)o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 777\n");
+    printf("Output\t\t: ");
+    printf("% o\n\n", 777);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 777\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("% o\n\n", 777);
+
+    //Specifier +o check
+    printf("Test 38\t\t: +o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 128\n");
+    printf("Output\t\t: ");
+    printf("%+o\n\n", 128);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 128\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%+o\n\n", 128);
+
+    //Specifier -o check
+    printf("Test 39\t\t: -o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 48\n");
+    printf("Output\t\t: ");
+    printf("%-o\n\n", 48);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 48\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%-o\n\n", 48);
+
+    //Specifier -5o check
+    printf("Test 40\t\t: -5o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 2048\n");
+    printf("Output\t\t: ");
+    printf("%-5o\n\n", 2048);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 2048\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%-5o\n\n", 2048);
     return (0);
 }
