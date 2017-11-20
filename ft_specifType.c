@@ -40,13 +40,7 @@ void	ft_c(va_list ap, char *format, char flag)
     if (f_addon == '+' && flag == '0')
         ft_fill(p_addon - 1, ' ');
     if (c)
-    {
-        if (param > 0 && !flag)
-            ft_fill(param - 1, ' ');
-        ft_putchar(c);
-        if (f_addon == '-' && flag == '+')
-            ft_fill(param - 1, ' ');
-    }
+        ft_c_support(c, param, flag, f_addon);
 }
 
 void	ft_s(va_list ap, char *format, char flag)

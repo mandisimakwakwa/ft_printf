@@ -28,27 +28,23 @@ void	ft_o(va_list ap, char *format, char flag)
     int     o;
     int     param;
     char    *tmp;
+    char    f_addon;
 
     o = va_arg(ap, int);
-    if ((flag=='0') || (flag=='-'&&format[ft_chrpos(format, flag)+1]=='0'))
+    f_addon = format[ft_chrpos(format, flag) + 1];
+    if ((flag == '0') || (flag == '-' && f_addon == '0'))
     {
         tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
         param = ft_getParam(tmp, flag) - 1;
     }
+    if (flag == '#' && f_addon == '-')
+        tmp = ft_strsub(format, ft_chrpos(format, '+') + 1, ft_strlen(format));
     else
         param = ft_getParam(format, flag) - 1;
     if (param > 0 && !flag)
         ft_fill(param - 1, ' ');
     if (o)
-    {
-        if (flag == '+' && param > 0)
-            ft_fill(param - ft_nbrlen(o), ' ');
-        if (flag == '0' && param > 0)
-            ft_fill(param - ft_nbrlen(o), '0');
-        ft_putoctal(o);
-        if (flag == '-' && param > 0)
-            ft_fill(param - ft_nbrlen(o), ' ');
-    }
+        ft_o_support(o, param - 1, flag, f_addon);
 }
 
 void	ft_u(va_list ap, char *format, char flag)

@@ -41,4 +41,6 @@ void    	ft_fill(int fillCount, char c);
 void        ft_minusFlag(int d, char flag);
 void        ft_spaceFlag(int d, char flag, int param);
 void        ft_zeroFlag(int d, char flag);
+void        ft_o_support(int o, int param, char flag, char f_addon);
+void        ft_c_support(char c, int param, char flag, char f_addon);
 #endif
