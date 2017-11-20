@@ -27,16 +27,27 @@ void	ft_o(va_list ap, char *format, char flag)
 {
     int     o;
     int     param;
+    char    *tmp;
 
     o = va_arg(ap, int);
-    param = ft_getParam(format, flag) - 1;
+    if (flag == '0')
+    {
+        tmp = ft_strsub(format, ft_chrpos(format, 'O') + 1, ft_strlen(format));
+        param = ft_getParam(tmp, flag) - 1;
+    }
+    else
+        param = ft_getParam(format, flag) - 1;
     if (param > 0 && !flag)
         ft_fill(param - 1, ' ');
     if (o)
     {
+        if (flag == '+' && param > 0)
+            ft_fill(param - ft_nbrlen(o), ' ');
+        if (flag == '0' && param > 0)
+            ft_fill(param - ft_nbrlen(o), '0');
         ft_putoctal(o);
         if (flag == '-' && param > 0)
-            ft_fill(param - ft_nbrlen(o), '*');
+            ft_fill(param - ft_nbrlen(o), ' ');
     }
 }
 

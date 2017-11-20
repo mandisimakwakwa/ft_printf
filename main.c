@@ -539,5 +539,29 @@ int		main(void)
     ft_printf("Input\t\t: 2048\n");
     ft_printf("Output\t\t: ");
     ft_printf("%-5o\n\n", 2048);
+
+    //Specifier +10o check
+    printf("Test 41\t\t: +10o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 2048\n");
+    printf("Output\t\t: ");
+    printf("%+10o\n\n", 2048);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 2048\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%+10o\n\n", 2048);
+
+    //Specifier 010o check
+    printf("Test 42\t\t: 010o\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 2048\n");
+    printf("Output\t\t: ");
+    printf("%010o\n\n", 2048);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 2048\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%010o\n\n", 2048);
     return (0);
 }
