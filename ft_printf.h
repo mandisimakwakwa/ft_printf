@@ -29,7 +29,7 @@ void        ft_specifTypeIni(char *format, char specif, char flag, va_list ap);
 void	    ft_c(va_list ap, char *format, char flag);
 void    	ft_s(va_list ap, char *format, char flag);
 void    	ft_p();
-void    	ft_x();
+void    	ft_x(va_list ap, char *format, char flag);
 void    	ft_d(va_list ap, char *format, char flag);
 void    	ft_i();
 void    	ft_o(va_list ap, char *format, char flag);

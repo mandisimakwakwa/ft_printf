@@ -74,5 +74,21 @@ void	ft_s(va_list ap, char *format, char flag)
 void	ft_p()
 {}
 
-void	ft_x()
-{}
+void	ft_x(va_list ap, char *format, char flag)
+{
+    int     x;
+    int     x_length;
+    int     param;
+    char    *tmpX;
+
+    x = va_arg(ap, int);
+    x_length = ft_nbrlen(x);
+    param = ft_getParam(format, flag);
+    if (x == 'X')
+    {
+        tmpX = ft_itoa(x);
+        ft_putstr(tmpX);
+    }
+    if (x)
+        ft_puthex(x);
+}
