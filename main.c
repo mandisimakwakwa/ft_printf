@@ -695,5 +695,29 @@ int		main(void)
     ft_printf("Input\t\t: 6777215\n");
     ft_printf("Output\t\t: ");
     ft_printf("%X\n\n", 6777215);
+
+    //Specifier #x check
+    printf("Test 54\t\t: #x\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 16777215\n");
+    printf("Output\t\t: ");
+    printf("%#x\n\n", 16777215);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 16777215\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%#x\n\n", 16777215);
+
+    //Specifier #X check
+    printf("Test 55\t\t: #X\n\n");
+    printf("Function\t: Printf\n");
+    printf("Input\t\t: 1677725\n");
+    printf("Output\t\t: ");
+    printf("%#X\n\n", 1677725);
+
+    ft_printf("Function\t: ft_printf\n");
+    ft_printf("Input\t\t: 1677725\n");
+    ft_printf("Output\t\t: ");
+    ft_printf("%#X\n\n", 1677725);
     return (0);
 }

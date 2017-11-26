@@ -9,7 +9,7 @@ void    ft_specifTypeIni(char *format, char specif, char flag, va_list ap)
     else if (specif == 'p')
         ft_p(ap);
     else if (specif == 'x' || specif == 'X')
-        ft_x(ap, format, specif);
+        ft_x(ap, format, flag);
     else if (specif == 'd' || specif == 'D')
         ft_d(ap, format, flag);
     else if (specif == 'i')
@@ -81,6 +81,10 @@ void	ft_x(va_list ap, char *format, char flag)
 
     x = va_arg(ap, int);
     param = ft_getParam(format, flag);
+    if (flag == '#' && !ft_strchr(format, 'X'))
+        ft_putstr("0x");
+    if (flag == '#' && ft_strchr(format, 'X'))
+        ft_putstr("0X");
     if (x && ft_strchr(format, 'X'))
         ft_putstr(ft_itoa_base(x, 16));
     if (x && !param && !ft_strchr(format, 'X'))
