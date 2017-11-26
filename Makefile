@@ -29,6 +29,8 @@ OBJ = ft_printf.o \
 	  ft_specifType2.o \
 	  ft_support.o \
 	  $(PATH_LIB)ft_atoi.o \
+	  $(PATH_LIB)ft_itoa.o \
+	  $(PATH_LIB)ft_itoa_base.o \
 	  $(PATH_LIB)ft_bzero.o \
 	  $(PATH_LIB)ft_isalnum.o \
 	  $(PATH_LIB)ft_isalpha.o \

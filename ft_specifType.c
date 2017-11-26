@@ -77,18 +77,12 @@ void	ft_p()
 void	ft_x(va_list ap, char *format, char flag)
 {
     int     x;
-    int     x_length;
     int     param;
-    char    *tmpX;
 
     x = va_arg(ap, int);
-    x_length = ft_nbrlen(x);
     param = ft_getParam(format, flag);
-    if (x == 'X')
-    {
-        tmpX = ft_itoa(x);
-        ft_putstr(tmpX);
-    }
-    if (x)
+    if (x && ft_strchr(format, 'X'))
+        ft_putstr(ft_itoa_base(x, 16));
+    if (x && !param && !ft_strchr(format, 'X'))
         ft_puthex(x);
 }
