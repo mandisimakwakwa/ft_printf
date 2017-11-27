@@ -71,8 +71,14 @@ void	ft_s(va_list ap, char *format, char flag)
     }
 }
 
-void	ft_p()
-{}
+void	ft_p(va_list ap)
+{
+    int	nbr;
+
+    nbr = va_arg(ap, int);
+    ft_putstr("0x");
+    ft_puthex(nbr);
+}
 
 void	ft_x(va_list ap, char *format, char flag)
 {

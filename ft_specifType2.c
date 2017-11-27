@@ -20,8 +20,24 @@ void	ft_d(va_list ap, char *format, char flag)
         ft_putnbr(d);
 }
 
-void	ft_i()
-{}
+void	ft_i(va_list ap, char *format, char flag)
+{
+    int	i;
+    int	i_length;
+    int	param;
+
+    i = va_arg(ap, int);
+    param = ft_getParam(format, flag) - 1;
+    i_length = ft_nbrlen(i) + 1;
+    if (flag == '0')
+        ft_fill(param - i_length, flag);
+    if (flag == '.')
+        ft_fill(param - i_length, '0');
+    if (flag == '+')
+        if (i > 0)
+            ft_putchar('+');
+    ft_putnbr(i);
+}
 
 void	ft_o(va_list ap, char *format, char flag)
 {
