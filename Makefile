@@ -22,9 +22,6 @@ OBJ = ft_printf.o \
       ft_mod.o \
 	  ft_param.o \
 	  ft_flags.o \
-	  ft_width.o \
-	  ft_precision.o \
-	  ft_length.o \
 	  ft_specifType.o \
 	  ft_specifType2.o \
 	  ft_support.o \
