@@ -6,7 +6,7 @@
 /*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 18:06:22 by mmakwakw          #+#    #+#             */
-/*   Updated: 2017/11/30 18:08:05 by mmakwakw         ###   ########.fr       */
+/*   Updated: 2017/11/30 18:23:22 by mmakwakw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,10 +37,10 @@ void		ft_u(va_list ap, char *format, char flag);
 void		ft_mod(char *format);
 int			ft_getparam(char *format, char flag);
 void		ft_plusflag(int d, char flag, int param, char *format);
-void		ft_fill(int fillCount, char c);
+void		ft_fill(int fillcount, char c);
 void		ft_minusflag(int d, char flag);
 void		ft_spaceflag(int d, char flag, int param);
 void		ft_zeroflag(int d, char flag);
 void		ft_o_support(int o, int param, char flag, char f_addon);
 void		ft_c_support(char c, int param, char flag, char f_addon);
-#endif
+#	endif
