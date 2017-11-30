@@ -1,6 +1,18 @@
-#include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_specifType.c                                    :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/11/30 18:08:27 by mmakwakw          #+#    #+#             */
+/*   Updated: 2017/11/30 18:10:57 by mmakwakw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void    ft_specifTypeIni(char *format, char specif, char flag, va_list ap)
+#	include "ft_printf.h"
+
+void	ft_speciftypeini(char *format, char specif, char flag, va_list ap)
 {
 	if (specif == 'c' || specif == 'C')
 		ft_c(ap, format, flag);
@@ -22,17 +34,17 @@ void    ft_specifTypeIni(char *format, char specif, char flag, va_list ap)
 
 void	ft_c(va_list ap, char *format, char flag)
 {
-	char    c;
-	char    f_addon;
-	char    *tmp;
-	int     param;
-	int     p_addon;
+	char	c;
+	char	f_addon;
+	char	*tmp;
+	int		param;
+	int		p_addon;
 
 	c = (char)va_arg(ap, int);
 	f_addon = format[ft_chrpos(format, flag) + 1];
 	tmp = ft_strsub(format, ft_chrpos(format, f_addon), ft_strlen(format) - 2);
-	param = ft_getParam(format, flag) - 1;
-	p_addon = ft_getParam(tmp, flag) - 1;
+	param = ft_getparam(format, flag) - 1;
+	p_addon = ft_getparam(tmp, flag) - 1;
 	if (flag == '+' && f_addon != '-')
 		ft_fill(param - 1, ' ');
 	if (flag == '0' && f_addon != '+')
@@ -45,16 +57,16 @@ void	ft_c(va_list ap, char *format, char flag)
 
 void	ft_s(va_list ap, char *format, char flag)
 {
-	char    *s;
-	int     param;
-	int     s_length;
+	char	*s;
+	int		param;
+	int		s_length;
 
 	s = va_arg(ap, char*);
 	if (s == NULL && flag == '\0')
 		ft_putstr("(null)");
 	else
 	{
-		param = ft_getParam(format, flag) - 1;
+		param = ft_getparam(format, flag) - 1;
 		s_length = ft_strlen(s);
 		if (ft_strcmp(s, "") == 0 && !flag)
 			ft_putstr("");
@@ -82,11 +94,11 @@ void	ft_p(va_list ap)
 
 void	ft_x(va_list ap, char *format, char flag)
 {
-	int     x;
-	int     param;
+	int		x;
+	int		param;
 
 	x = va_arg(ap, int);
-	param = ft_getParam(format, flag);
+	param = ft_getparam(format, flag);
 	if (flag == '#' && !ft_strchr(format, 'X'))
 		ft_putstr("0x");
 	if (flag == '#' && ft_strchr(format, 'X'))
