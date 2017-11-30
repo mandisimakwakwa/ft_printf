@@ -43,4 +43,4 @@ void		ft_spaceflag(int d, char flag, int param);
 void		ft_zeroflag(int d, char flag);
 void		ft_o_support(int o, int param, char flag, char f_addon);
 void		ft_c_support(char c, int param, char flag, char f_addon);
-#	endif
+#   endif
