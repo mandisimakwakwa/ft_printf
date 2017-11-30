@@ -6,7 +6,7 @@
 #    By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2017/01/03 14:44:02 by mmakwakw          #+#    #+#              #
-#    Updated: 2017/01/03 15:39:32 by mmakwakw         ###   ########.fr        #
+#    Updated: 2017/11/30 18:11:50 by mmakwakw         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,8 +22,8 @@ OBJ = ft_printf.o \
       ft_mod.o \
 	  ft_param.o \
 	  ft_flags.o \
-	  ft_specifType.o \
-	  ft_specifType2.o \
+	  ft_speciftype.o \
+	  ft_speciftype2.o \
 	  ft_support.o \
 	  $(PATH_LIB)ft_atoi.o \
 	  $(PATH_LIB)ft_itoa.o \
