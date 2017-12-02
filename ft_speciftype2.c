@@ -6,7 +6,7 @@
 /*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 18:12:49 by mmakwakw          #+#    #+#             */
-/*   Updated: 2017/11/30 18:13:53 by mmakwakw         ###   ########.fr       */
+/*   Updated: 2017/12/02 17:57:01 by mmakwakw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,33 +55,11 @@ void	ft_o(va_list ap, char *format, char flag)
 {
 	int		o;
 	int		param;
-	char	*tmp;
 	char	f_addon;
 
 	o = va_arg(ap, int);
 	f_addon = format[ft_chrpos(format, flag) + 1];
-	if (flag == '0')
-	{
-		tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
-		param = ft_getparam(tmp, flag) - 1;
-	}
-	if (flag == '-' && f_addon == '0')
-	{
-		if (ft_chrpos(format, '#') > 0)
-		{
-			ft_putchar('0');
-			tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
-		}
-		else
-			tmp = ft_strsub(format, ft_chrpos(format, '+'), ft_strlen(format));
-		param = ft_getparam(tmp, flag) - 1;
-	}
-	else if (flag == '#' && f_addon == '-')
-		tmp = ft_strsub(format, ft_chrpos(format, '+') + 1, ft_strlen(format));
-	else
-		param = ft_getparam(format, flag) - 1;
-	if (param > 0 && !flag)
-		ft_fill(param - 1, ' ');
+	ft_o_support_p2(flag, format, f_addon);
 	if (o)
 		ft_o_support(o, param - 1, flag, f_addon);
 }
