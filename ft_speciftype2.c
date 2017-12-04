@@ -56,12 +56,17 @@ void	ft_o(va_list ap, char *format, char flag)
 	int		o;
 	int		param;
 	char	f_addon;
+	char	*tmp;
 
 	o = va_arg(ap, int);
 	f_addon = format[ft_chrpos(format, flag) + 1];
+	if (flag == '0')
+	{
+		tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
+		param = ft_getparam(tmp, flag) - 1;
+	}
 	ft_o_support_p2(flag, format, f_addon);
-	if (o)
-		ft_o_support(o, param - 1, flag, f_addon);
+	ft_o_support(o, param - 1, flag, f_addon);
 }
 
 void	ft_u(va_list ap, char *format, char flag)
