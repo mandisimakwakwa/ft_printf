@@ -1,25 +1,37 @@
-# include "ft_printf.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_support.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/06 17:50:54 by mmakwakw          #+#    #+#             */
+/*   Updated: 2017/12/06 18:15:46 by mmakwakw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int     ft_skip(char *format, int i)
+#	include "ft_printf.h"
+
+int		ft_skip(char *format, int i)
 {
 	while (!ft_isalpha(format[i]))
 		i++;
-	return i;
+	return (i);
 }
 
-void	ft_fill(int fillCount, char c)
+void	ft_fill(int fillcount, char c)
 {
 	int	i;
 
 	i = 0;
-	while (i <= fillCount)
+	while (i <= fillcount)
 	{
 		ft_putchar(c);
 		i++;
 	}
 }
 
-void    ft_o_support(int o, int param, char flag, char f_addon)
+void	ft_o_support(int o, int param, char flag, char f_addon)
 {
 	if (o)
 	{
@@ -41,31 +53,32 @@ void    ft_o_support(int o, int param, char flag, char f_addon)
 	}
 }
 
-void	ft_o_support_p2(char flag, char *format, char f_addon)
+void	ft_o_support_p2(char flag, char *fmt, char f_addon)
 {
 	char	*tmp;
 	int		param;
 
+	param = '\0';
 	if (flag == '-' && f_addon == '0')
 	{
-		if (ft_chrpos(format, '#') > 0)
+		if (ft_chrpos(fmt, '#') > 0)
 		{
 			ft_putchar('0');
-			tmp = ft_strsub(format, ft_chrpos(format, '0') + 1, ft_strlen(format));
+			tmp = ft_strsub(fmt, ft_chrpos(fmt, '0') + 1, ft_strlen(fmt));
 		}
 		else
-			tmp = ft_strsub(format, ft_chrpos(format, '+'), ft_strlen(format));
+			tmp = ft_strsub(fmt, ft_chrpos(fmt, '+'), ft_strlen(fmt));
 		param = ft_getparam(tmp, flag) - 1;
 	}
 	else if (flag == '#' && f_addon == '-')
-		tmp = ft_strsub(format, ft_chrpos(format, '+') + 1, ft_strlen(format));
+		tmp = ft_strsub(fmt, ft_chrpos(fmt, '+') + 1, ft_strlen(fmt));
 	else
-		param = ft_getparam(format, flag) - 1;
+		param = ft_getparam(fmt, flag) - 1;
 	if (param > 0 && !flag)
 		ft_fill(param - 1, ' ');
 }
 
-void    ft_c_support(char c, int param, char flag, char f_addon)
+void	ft_c_support(char c, int param, char flag, char f_addon)
 {
 	if (param > 0 && !flag)
 		ft_fill(param - 1, ' ');

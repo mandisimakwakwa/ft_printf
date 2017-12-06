@@ -6,7 +6,7 @@
 /*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/30 18:06:22 by mmakwakw          #+#    #+#             */
-/*   Updated: 2017/12/02 17:46:16 by mmakwakw         ###   ########.fr       */
+/*   Updated: 2017/12/06 17:50:45 by mmakwakw         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,5 @@ void		ft_spaceflag(int d, char flag, int param);
 void		ft_zeroflag(int d, char flag);
 void		ft_o_support(int o, int param, char flag, char f_addon);
 void		ft_c_support(char c, int param, char flag, char f_addon);
-void        ft_o_support_p2(char flag, char *format, char f_addon);
+void		ft_o_support_p2(char flag, char *format, char f_addon);
 #	endif

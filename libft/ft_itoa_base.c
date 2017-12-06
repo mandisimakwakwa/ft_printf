@@ -1,14 +1,26 @@
-#include "libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/06 18:02:06 by mmakwakw          #+#    #+#             */
+/*   Updated: 2017/12/06 18:03:48 by mmakwakw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#	include "libft.h"
 
 static int		ft_pow(int nb, int pow)
 {
-    if (pow == 0)
-        return (1);
-    else
-        return (nb * ft_pow(nb, pow - 1));
+	if (pow == 0)
+		return (1);
+	else
+		return (nb * ft_pow(nb, pow - 1));
 }
 
-char	*ft_itoa_base(int value, int base)
+char			*ft_itoa_base(int value, int base)
 {
 	int		i;
 	char	*nbr;
