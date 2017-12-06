@@ -59,6 +59,7 @@ void	ft_o(va_list ap, char *format, char flag)
 	char	*tmp;
 
 	o = va_arg(ap, int);
+	param = ft_getparam(format, flag) - 1;
 	f_addon = format[ft_chrpos(format, flag) + 1];
 	if (flag == '0')
 	{
