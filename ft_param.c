@@ -21,6 +21,8 @@ int		ft_getparam(char *format, char flag)
 
 	temp = ft_memalloc(ft_strlen(format));
 	i = 0;
+	if (format[i] == ' ' && ft_isdigit(format[i + 1]))
+		i++;
 	if (flag)
 		while (!ft_isdigit(format[i]) && format[i] != ' ')
 			i++;
