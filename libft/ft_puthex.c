@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_puthex.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: mmakwakw <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/12/06 18:05:27 by mmakwakw          #+#    #+#             */
+/*   Updated: 2017/12/06 18:06:47 by mmakwakw         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
 static void	ft_puthex_rec(unsigned int n)
@@ -8,7 +20,7 @@ static void	ft_puthex_rec(unsigned int n)
 	map = "0123456789abcdef";
 	if (n)
 	{
-		c = (char) (n & 0xF);
+		c = (char)(n & 0xF);
 		n = (n >> 4);
 		ft_puthex_rec(n);
 		ft_putchar(map[(int)c]);

@@ -60,7 +60,7 @@ char		**ft_strsplit(char const *s, char c);
 char		*ft_itoa_base(int n, int base);
 char		*ft_itoa(int n);
 char		ft_ishex(int n);
-char		*ft_wchrstr(wchar_t *src, char *dst, size_t dstLen);
+char		*ft_wchrstr(wchar_t *src, char *dst, size_t dstlen);
 size_t		ft_strlcat(char *dst, const char *src, size_t size);
 size_t		ft_strlen(const char *s);
 size_t		ft_nbrlen(int n);
